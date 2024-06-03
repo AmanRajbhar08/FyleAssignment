@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  
+   <!--Hero section start -->
+<section class="Hero-section">
+  <div class="contact_parent_div">
+    <div class="contact_sub_div">
+      <div class="contact_sub_div_child1">
+        <div class="contact_text-container">
+          <h1></h1>
+          <h2></h2>
+          <p></p>
+          <button onclick="showContactFormModal()" id="contactButton" class="contact_button">Contact us</button> <!-- Added id attribute -->
+        </div>
+      </div>
+      <div class="contact_sub_div_child2">
+        <div class="child2_img_container">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Hero section End -->
+
+<!-- Model-->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <iframe src="ContactForm.html" width="100%" height="400px" style="border:none;"></iframe>
+  </div>
+</div>
+
+<script>
+  // Function to show modal
+  function showContactFormModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
+   function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+  
+</script>
+
+
+
+    <!--service you provide  -->
+    <section class="Servies_parent">
+      <div class="service_heading"></div>
+      <div class="serivce_SUb_Head_box">
+        <div class="service_subheading"></div>
+        <div class="servie_subHead_descp"></div>
+      </div>
+      <section class="carousel-section">
+        <div class="carousel-container">
+          <div class="carousel-track-container">
+            <div class="carousel-track">
+             
+            </div>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-dot current-slide"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+        </div>
+      </section>
+    </section>
+    <!--service you provide end -->
+
+    <!-- section start -->
+    <section>
+      <div class="chooseUs">
+        <div class="heading"></div>
+        <div class="subHeading"></div>
+        <div class="container"></div>
+      </div>
+    </section>
+
+    <!-- we are Best Section-->
+    <section>
+      <div class="weAreBest">
+        <h1></h1>
+        <h2></h2>
+        <div class="content">
+          <div class="Image_We_are_best"></div>
+          <div class="description_box_we_are_best"></div>
+        </div>
+      </div>
+    </section>
+    <!--we are best section ends Here -->
+
+    <!--company's growth-->
+    <section>
+      <div class="growth_section">
+        <div class="growth-heading"></div>
+        <div class="growth-subheading"></div>
+        <div class="growth-container"></div>
+      </div>
+    </section>
+    <!--company's growth end of section -->
+
+    <!-- Client Feedback Section -->
+    <section class="client-feedback">
+      <h1></h1>
+      <h2></h2>
+      <div class="testimonial">
+        <i class="fas fa-quote-left"></i>
+        <p></p>
+        <div class="client-name"></div>
+        <div class="client-position"></div>
+      </div>
+    </section>
+
+    <section class="Clientlogo_section">
+      <div class="client-logs"></div>
+    </section>
+
+    <script src="content.js"></script>
+    <script src="main.js"></script>
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const dots = document.querySelectorAll(".carousel-dot");
+      const dotArray = Array.from(dots);
+      let currentIndex = 0;
+
+      function updateCarousel(index) {
+        const offset = -index * (370 + 10) * 4; // 370px width + 10px margin, showing 4 images at a time
+        track.style.transform = `translateX(${offset}px)`;
+
+        dotArray.forEach((dot) => dot.classList.remove("active"));
+        dotArray[index].classList.add("active");
+      }
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          currentIndex = parseInt(dot.dataset.slide);
+          updateCarousel(currentIndex);
+        });
+      });
+    </script>
+  </body>
+</html>

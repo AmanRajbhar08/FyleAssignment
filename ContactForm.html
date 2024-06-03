@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <style>
+      .contact_form_page {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+      .contact_form_page h1 {
+        text-align: left;
+        font-family: AktivGrotesk-Bold, sans-serif;
+        font-size: 20px;
+      }
+      .contact_form_page label,
+      .contact_form_page p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        display: block;
+        font-size: 14px;
+        color: #6f718f99;
+        font-family: AktivGrotesk-Regular, sans-serif;
+      }
+      .contact_form_page .input-container {
+        position: relative;
+        margin-bottom: 15px;
+      }
+      .contact_form_page input[type="text"],
+      .contact_form_page input[type="email"] {
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        border-bottom: 1px solid #6f718f99;
+        background: none;
+        font-size: 14px;
+        color: #000;
+        position: relative;
+        z-index: 1;
+      }
+      .contact_form_page input[type="text"]:focus,
+      .contact_form_page input[type="email"]:focus {
+        outline: none;
+        border-bottom: 1px solid #ff3366;
+      }
+      .contact_form_page input[type="checkbox"] {
+        margin-right: 10px;
+        accent-color: #ff3366;
+        border: 2px solid #ff3366;
+      }
+      .contact_form_page button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ff3366;
+        color: white;
+        cursor: pointer;
+        font-family: AktivGrotesk-Bold, sans-serif;
+      }
+      .contact_form_page button:hover {
+        background-color: #e62e5c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact_form_page">
+      <h1>Talk to Us</h1>
+      <form
+        action="https://getform.io/f/pbqgpnkb"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="workEmail">Work Email</label>
+        <div class="input-container">
+          <input type="email" id="workEmail" name="workEmail" required />
+        </div>
+
+        <label for="firstName">First Name</label>
+        <div class="input-container">
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+
+        <label for="lastName">Last Name</label>
+        <div class="input-container">
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+
+        <label>
+          <input type="checkbox" id="terms" name="terms" required />
+          I agree to Fyle's terms and conditions, and provide consent to send me
+          communication.
+        </label>
+
+        <button type="submit">Contact Us</button>
+      </form>
+    </div>
+  </body>
+</html>
